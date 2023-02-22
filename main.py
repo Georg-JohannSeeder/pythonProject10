@@ -23,8 +23,8 @@ pauto = pygame.image.load("f1_red.png")
 sauto = pygame.image.load("f1_blue.png")
 
 #kiirus ja asukoht
-posX, posY = 0, 0
-speedX = 1
+posX, posY = 420, 15
+speedY = 0.5
 
 gameover = False
 while not gameover:
@@ -35,11 +35,11 @@ while not gameover:
            sys.exit()
 
     #pildi lisamine ekraanile
-    screen.blit(ralli, (posX,posY))
+    screen.blit(ralli, (0,0))
     screen.blit(pauto, (posX, posY))
     screen.blit(sauto, (posX, posY))
 
-    posX += speedX
+    posY += speedY
 
     #graafika kuvamine ekraanil
     pygame.display.flip()
