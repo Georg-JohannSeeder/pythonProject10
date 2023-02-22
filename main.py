@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, time, random
 
 pygame.init()
 
@@ -21,10 +21,11 @@ screen.fill(lBlue)
 ralli = pygame.image.load("bg_rally.jpg")
 pauto = pygame.image.load("f1_red.png")
 sauto = pygame.image.load("f1_blue.png")
+sauto2 = pygame.image.load("f1_blue.png")
 
 #kiirus ja asukoht
-posX, posY = 420, 15
-speedY = 0.5
+posX, posY = 420, 0
+speedY = 0.15
 
 gameover = False
 while not gameover:
@@ -36,13 +37,15 @@ while not gameover:
 
     #pildi lisamine ekraanile
     screen.blit(ralli, (0,0))
-    screen.blit(pauto, (posX, posY))
+    screen.blit(pauto, (300, 390))
     screen.blit(sauto, (posX, posY))
-
+    #screen.blit(sauto2, ())
     posY += speedY
+
 
     #graafika kuvamine ekraanil
     pygame.display.flip()
+
 
 
 pygame.quit()
