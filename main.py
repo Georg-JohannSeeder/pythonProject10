@@ -39,7 +39,7 @@ while not gameover:
     screen.blit(ralli, (0,0))
     screen.blit(pauto, (300, 390))
     screen.blit(sauto, (posX, posY))
-    #screen.blit(sauto2, ())
+    screen.blit(sauto2, (175, 0))
     posY += speedY
 
 
